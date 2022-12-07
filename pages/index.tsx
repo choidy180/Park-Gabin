@@ -11,8 +11,6 @@ import GabinImage from '../assets/image/KakaoTalk_20221207_234627425.jpg';
 
 const Home:NextPage = () => {
     const isTheme = useRecoilValue(isThemeAtom);
-    React.useEffect(()=>{
-    });
     console.log(isTheme);
     return(
         <Container>

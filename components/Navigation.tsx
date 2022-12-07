@@ -27,7 +27,7 @@ export const Navigation = () => {
                         height={'54px'}
                         src={'/images/elements_3697006.jpg'}
                     />
-                    <h1>Gabin's Pages</h1>
+                    <h1>{"Gabin's Pages"}</h1>
                 </div>
                 <ProfileBox color={isTheme}>
                     <div>
