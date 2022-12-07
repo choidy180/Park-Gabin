@@ -8,11 +8,11 @@ export const IntroBox = () => {
     return (
         <Wrapper>
             <NavigationBox color={isTheme}>
-                <Navigation>TEST</Navigation>
-                <Navigation>TEST</Navigation>
-                <Navigation>TEST</Navigation>
-                <Navigation>TEST</Navigation>
-                <Navigation>TEST</Navigation>
+                <Navigation>모두보기</Navigation>
+                <Navigation>제품디자인</Navigation>
+                <Navigation>광고디자인</Navigation>
+                <Navigation>시각디자인</Navigation>
+                <Navigation>상업디자인</Navigation>
             </NavigationBox>
             <ContentBox>
                 <IntroContentBox/>
@@ -28,7 +28,7 @@ export const IntroBox = () => {
 
 const Wrapper = styled.div`
     width: 100%;
-    max-width: 720px;
+    max-width: 1080px;
     margin-top: 74px;
     padding: 40px;
     padding-bottom: 70px;

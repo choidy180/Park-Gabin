@@ -26,7 +26,7 @@ export const IntroContentBox = () => {
 
 const Wrapper = styled.div`
     position: relative;
-    width: calc(100%);
+    width: calc(50% - 11px);
     padding: 24px 0;
     cursor: pointer;
     &::before{
