@@ -4,7 +4,6 @@ import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { isMobileAtom, isThemeAtom } from 'recoil/theme';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import HeadLogo from '../assets/image/img1.daumcdn.jpg';
 import ProfileImage from '../assets/image/KakaoTalk_20221207_232311235.jpg';
 
 export const Navigation = () => {
@@ -24,9 +23,9 @@ export const Navigation = () => {
             <Container className={link === ('/announcement') || link === ('/practice') || link === ('/creator') ? 'white' : ''} color={isTheme}>
                 <div className='logoHead'>
                     <Image
-                        width={'40px'}
-                        height={'40px'}
-                        src={HeadLogo}
+                        width={'54px'}
+                        height={'54px'}
+                        src={'/images/elements_3697006.jpg'}
                     />
                     <h1>Gabin's Pages</h1>
                 </div>
