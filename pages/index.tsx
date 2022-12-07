@@ -7,7 +7,7 @@ import { isThemeAtom } from 'recoil/theme';
 import styled from 'styled-components';
 import "aos/dist/aos.css";
 import { IntroBox } from 'components/IntroBox';
-import GabinImage from '../assets/image/KakaoTalk_20221207_234147014.jpg';
+import GabinImage from '../assets/image/KakaoTalk_20221207_234627425.jpg';
 
 const Home:NextPage = () => {
     const isTheme = useRecoilValue(isThemeAtom);
