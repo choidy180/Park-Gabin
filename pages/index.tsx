@@ -2,12 +2,12 @@ import { ContentWrapper } from 'components/ContentWrapper';
 import { NextPage } from 'next';
 import Image from 'next/image';
 import * as React from 'react';
-import { useRecoilValue, useSetRecoilState } from 'recoil';
+import { useRecoilValue } from 'recoil';
 import { isThemeAtom } from 'recoil/theme';
 import styled from 'styled-components';
-import AOS from "aos";
 import "aos/dist/aos.css";
 import { IntroBox } from 'components/IntroBox';
+import GabinImage from '../assets/image/KakaoTalk_20221207_234147014.jpg';
 
 const Home:NextPage = () => {
     const isTheme = useRecoilValue(isThemeAtom);
@@ -23,24 +23,16 @@ const Home:NextPage = () => {
                             <Image 
                                 layout='fill'
                                 objectFit='cover'
-                                src="/images/2047a763a019243f8e49ab5b169c04119.jpg" 
+                                src={GabinImage}
                                 alt='navTopBackGround'
                                 onClick={() => console.log(isTheme)}
-                            />
-                        </div>
-                        <div className="wrapper red">
-                            <Image 
-                                layout='fill' 
-                                objectFit='cover' 
-                                src="/images/21c607eed8033bb3f789c27ba04d3f3b0.jpg" 
-                                alt='navTopBackGround'
                             />
                         </div>
                     </div>
                 </AbsoluteMainBox>
                 <AbsoluteTitleBack>
-                    <h2>communicative<br/>developer</h2>
-                    <p><b style={{color: isTheme}}>방문해주셔서 감사합니다</b><br/>웹개발을 전반적으로 다루는 개발 블로그가 되도록 노력하겠습니다</p>
+                    <h2>developing<br/>designer</h2>
+                    <p><b style={{color: isTheme}}>방문해주셔서 감사합니다</b><br/>항상 노력하고 발전하는 디자이너가 되도록 노력하겠습니다</p>
                 </AbsoluteTitleBack>
             </AbsoluteBox>
             <HomeTitle color={isTheme}>
@@ -82,6 +74,7 @@ const AbsoluteMainBox = styled.div`
     transform: translateX(calc(-100% - 40px));
     display: flex;
     overflow: hidden;
+    pointer-events: none;
     .box{
         width: auto;
         height: 100vh;

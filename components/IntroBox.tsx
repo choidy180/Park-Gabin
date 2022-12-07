@@ -8,11 +8,11 @@ export const IntroBox = () => {
     return (
         <Wrapper>
             <NavigationBox color={isTheme}>
-                <Navigation>HOME</Navigation>
-                <Navigation>NODE</Navigation>
-                <Navigation>JS</Navigation>
-                <Navigation>REACT</Navigation>
-                <Navigation>OTHER</Navigation>
+                <Navigation>TEST</Navigation>
+                <Navigation>TEST</Navigation>
+                <Navigation>TEST</Navigation>
+                <Navigation>TEST</Navigation>
+                <Navigation>TEST</Navigation>
             </NavigationBox>
             <ContentBox>
                 <IntroContentBox/>

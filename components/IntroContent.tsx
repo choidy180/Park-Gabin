@@ -18,7 +18,7 @@ export const IntroContentBox = () => {
                 <ImageDark/>
                 <Viewing>VIEWING.</Viewing>
             </ImageBox>
-            <Title>자바스크립트 공부 자바스크립...</Title>
+            <Title>가빈이의 프로젝트</Title>
             <ContentText> Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit optio nisi, autem illo molestias, itaque praesentium laboriosam, voluptatum eaque odit quas veniam minima mollitia deleniti. Possimus veniam adipisci saepe quibusdam?</ContentText>
         </Wrapper>
     )
@@ -26,7 +26,7 @@ export const IntroContentBox = () => {
 
 const Wrapper = styled.div`
     position: relative;
-    width: calc(50% - 11px);
+    width: calc(100%);
     padding: 24px 0;
     cursor: pointer;
     &::before{
@@ -49,7 +49,7 @@ const Wrapper = styled.div`
     }
     &:hover{
         img{
-            transform: scale(1.2);
+            transform: scale(1.1);
         }
         h1{
             color: ${props => props.color};

@@ -5,7 +5,7 @@ import { isMobileAtom, isThemeAtom } from 'recoil/theme';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import HeadLogo from '../assets/image/img1.daumcdn.jpg';
-import ProfileImage from '../assets/image/IMG_1835.jpg';
+import ProfileImage from '../assets/image/KakaoTalk_20221207_232311235.jpg';
 
 export const Navigation = () => {
     const isTheme = useRecoilValue(isThemeAtom);
@@ -28,19 +28,22 @@ export const Navigation = () => {
                         height={'40px'}
                         src={HeadLogo}
                     />
-                    <h1>M's Blog</h1>
+                    <h1>Gabin's Pages</h1>
                 </div>
                 <ProfileBox color={isTheme}>
                     <div>
                         <div className='back'/>
                         <div className='profileImage'>
-                            <Image
-                                width={'50px'}
-                                height={'50px'}
-                                src={ProfileImage}
-                            />
+                            <div>
+                                <Image
+                                    layout='fill'
+                                    objectFit='cover'
+                                    src={ProfileImage}
+                                    alt={'profile-image'}
+                                />
+                            </div>
                         </div>
-                        <h4><b>MINSEOK KIM</b><br/>Developer</h4>
+                        <h4><b>Gabin Park</b><br/>Product Designer</h4>
                     </div>
                 </ProfileBox>
                 <MenuBox color={isTheme}>
@@ -53,62 +56,45 @@ export const Navigation = () => {
                             <p>Home</p>
                             <div className='underline'/>
                         </div>
-                        <div className='moreBox'>
-                            <p>ㅎㅇㅎㅇ</p>
-                            <p>ㅎㅇㅎㅇ</p>
-                            <p>ㅎㅇㅎㅇ</p>
-                            <p>ㅎㅇㅎㅇ</p>
-                            <p>ㅎㅇㅎㅇ</p>
-                            <p>ㅎㅇㅎㅇ</p>
-                            <p>ㅎㅇㅎㅇ</p>
-                        </div>
                     </div>
                     <div className='home'>
                         <div className='back'/>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z" />
                         </svg>
-                        <p>Farm</p>
+                        <p>Introduction</p>
                         <div className='underline'/>
                     </div>
                     <div className='home'>
                         <div className='back'/>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
                         </svg>
-                        <p>Swap</p>
+                        <p>my career</p>
                         <div className='underline'/>
                     </div>
                     <div className='home'>
                         <div className='back'/>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
                         </svg>
-                        <p>Liquidty</p>
+                        <p>Performance</p>
                         <div className='underline'/>
                     </div>
                     <div className='home'>
                         <div className='back'/>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0" />
                         </svg>
-                        <p>Create NFT</p>
+                        <p>Award details</p>
                         <div className='underline'/>
                     </div>
                     <div className='home'>
                         <div className='back'/>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m5.231 13.481L15 17.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v16.5c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9zm3.75 11.625a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
                         </svg>
-                        <p>NFT Details</p>
-                        <div className='underline'/>
-                    </div>
-                    <div className='home'>
-                        <div className='back'/>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M10.05 4.575a1.575 1.575 0 10-3.15 0v3m3.15-3v-1.5a1.575 1.575 0 013.15 0v1.5m-3.15 0l.075 5.925m3.075.75V4.575m0 0a1.575 1.575 0 013.15 0V15M6.9 7.575a1.575 1.575 0 10-3.15 0v8.175a6.75 6.75 0 006.75 6.75h2.018a5.25 5.25 0 003.712-1.538l1.732-1.732a5.25 5.25 0 001.538-3.712l.003-2.024a.668.668 0 01.198-.471 1.575 1.575 0 10-2.228-2.228 3.818 3.818 0 00-1.12 2.687M6.9 7.575V12m6.27 4.318A4.49 4.49 0 0116.35 15m.002 0h-.002" />
-                        </svg>
-                        <p>Vote</p>
+                        <p>my projects</p>
                         <div className='underline'/>
                     </div>
                 </MenuBox>
@@ -186,6 +172,11 @@ const ProfileBox = styled.div`
             padding: 0;
             overflow: hidden;
             background-color: #ffffff;
+            div{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+            }
             img{
                 border-radius: 50%;
             }
@@ -266,6 +257,7 @@ const MenuBox = styled.div`
             font-size: 16px;
             font-family: 'NanumBarunGothic';
             font-weight: 400;
+            text-transform: uppercase;
         }
         &:hover{
             .back{
