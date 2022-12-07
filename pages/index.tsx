@@ -35,7 +35,7 @@ const Home:NextPage = () => {
             </AbsoluteBox>
             <HomeTitle color={isTheme}>
                 <h1>방문해주셔서<br/>감사합니다</h1>
-                <h2>끊임 없이 배워서 발전하며<br/>항상 논리적으로 설명하는 <br/>개발자가 되겠습니다.</h2>
+                <h2>끊임 없이 배워서 발전하는<br/> <br/>디자이너가 되겠습니다.</h2>
             </HomeTitle>
             <Box style={{paddingTop : '80px'}}>
                 <ContentWrapper>
