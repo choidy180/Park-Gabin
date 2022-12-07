@@ -12,7 +12,6 @@ import { IntroBox } from 'components/IntroBox';
 const Home:NextPage = () => {
     const isTheme = useRecoilValue(isThemeAtom);
     React.useEffect(()=>{
-      AOS.init();
     });
     console.log(isTheme);
     return(
