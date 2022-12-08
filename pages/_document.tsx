@@ -29,7 +29,6 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
         </Head>
         <body>
           <Main />
