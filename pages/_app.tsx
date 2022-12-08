@@ -7,6 +7,8 @@ import { Navigation } from 'components/Navigation';
 import { ThemeChangeBtn } from 'components/ThemeChangeBtn';
 import { ThemeNavigation } from 'components/ThemeNavgation';
 import '../src/styles/globals.css';
+import TopNav from 'components/TopNav';
+import { Container } from 'components/Container';
 
 function MyApp({ Component, pageProps }: AppProps) {
     const queryClient = new QueryClient();
@@ -22,10 +24,13 @@ function MyApp({ Component, pageProps }: AppProps) {
             <QueryClientProvider client={queryClient}>
                 <RecoilRoot>
                     <GlobalStyle/>
-                    <Navigation/>
-                    <ThemeNavigation/>
-                    <Component {...pageProps} />
+                    {/* <Navigation/> */}
+                    {/* <ThemeNavigation/> */}
+                    <Container>
+                        <Component {...pageProps} />
+                    </Container>
                     <ThemeChangeBtn/>
+                    <TopNav/>
                 </RecoilRoot>
             </QueryClientProvider>
         </>

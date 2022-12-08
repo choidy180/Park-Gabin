@@ -15,11 +15,11 @@ export const IntroBox = () => {
                 <Navigation>상업디자인</Navigation>
             </NavigationBox>
             <ContentBox>
-                <IntroContentBox/>
-                <IntroContentBox/>
-                <IntroContentBox/>
-                <IntroContentBox/>
-                <IntroContentBox/>
+                <IntroContentBox data-aos="zoom-in-up"/>
+                <IntroContentBox data-aos="zoom-in-up"/>
+                <IntroContentBox data-aos="zoom-in-up"/>
+                <IntroContentBox data-aos="zoom-in-up"/>
+                <IntroContentBox data-aos="zoom-in-up"/>
             </ContentBox>
         </Wrapper>
     )

@@ -28,7 +28,9 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+        </Head>
         <body>
           <Main />
           <NextScript />

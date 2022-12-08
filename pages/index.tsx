@@ -1,220 +1,203 @@
-import { ContentWrapper } from 'components/ContentWrapper';
 import { NextPage } from 'next';
-import Image from 'next/image';
 import * as React from 'react';
 import { useRecoilValue } from 'recoil';
 import { isThemeAtom } from 'recoil/theme';
 import styled from 'styled-components';
 import "aos/dist/aos.css";
-import { IntroBox } from 'components/IntroBox';
-import GabinImage from '../assets/image/KakaoTalk_20221207_234627425.jpg';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Home:NextPage = () => {
     const isTheme = useRecoilValue(isThemeAtom);
     console.log(isTheme);
+    React.useEffect(()=> {
+        Aos.init({
+            duration: 1000,
+        });
+    },[]);
     return(
         <Container>
-            <AbsoluteBox>
-                <AbsoluteMainBox> 
-                    <div className="box" style={isTheme ? {transform : 'none'} : {transform: 'translateX(-50%)'}}>
-                        <div className="wrapper blue">
-                            <Image 
-                                layout='fill'
-                                objectFit='cover'
-                                src={GabinImage}
-                                alt='navTopBackGround'
-                                onClick={() => console.log(isTheme)}
-                            />
+            {/* <h1 className='title'>PARK GABIN</h1> */}
+            <Top data-aos="zoom-in">
+                <img className='main-image' src='/images/KakaoTalk_Photo_2022-10-13-18-29-32.png' alt="" />
+                <div className="dark-back"/>
+                <div className="text-content" data-aos="fade-up">
+                    <h4>UN ICONICO MELTING POT</h4>
+                    <h2>PROJECT 1004</h2>
+                    <button style={{backgroundColor: '#6667AB'}}>MORE VIEW</button>
+                </div>
+            </Top>
+            <Center>
+                {/* <h2>PROJECT</h2> */}
+                <div className='box-1'>
+                    <div className='left' data-aos="fade-right">
+                        <div className='image-box'>
+                            <img src="/images/82ac209f4c0e4fa98ac0c408c959d768_20221206154545.jpg" alt="" />
                         </div>
+                        <h2 data-aos="fade-up">Teixeira<br/>Design Studio</h2>
                     </div>
-                </AbsoluteMainBox>
-                <AbsoluteTitleBack>
-                    <h2>developing<br/>designer</h2>
-                    <p><b style={{color: isTheme}}>방문해주셔서 감사합니다</b><br/>항상 노력하고 발전하는 디자이너가 되도록 노력하겠습니다</p>
-                </AbsoluteTitleBack>
-            </AbsoluteBox>
-            <HomeTitle color={isTheme}>
-                <h1>방문해주셔서<br/>감사합니다</h1>
-                <h2>끊임 없이 배워서 발전하는<br/> <br/>디자이너가 되겠습니다.</h2>
-            </HomeTitle>
-            <Box style={{paddingTop : '80px'}}>
-                <ContentWrapper>
-                    <IntroBox/>
-                </ContentWrapper>
-            </Box>
+                    <div className='right' data-aos="fade-left">
+                        <img src="/images/mountains-g935b2e2e4_1920.jpg" alt="" />
+                    </div>
+                </div>
+            </Center>
         </Container>
     )
 }
 
 const Container = styled.div`
     width: 100vw;
-    height: 100vh;
-    overflow: auto;
-    /* scroll-snap-type: y mandatory; */
-`
-const AbsoluteBox = styled.div`
-    position: sticky; 
-    width: 100%;
-    height: calc(var(--vh, 1vh) * 100);
-    top: 0;
-    scroll-snap-align: center;
-    z-index: 10;
-    h1{
-        font-size: 30px;
-        color: ${props=>props.theme.pointColor};
-    }
-`
-const AbsoluteMainBox = styled.div`
-    position: absolute;
-    width: 500px;
-    height: 100%;
-    left: 50%;
-    transform: translateX(calc(-100% - 40px));
-    display: flex;
-    overflow: hidden;
-    pointer-events: none;
-    .box{
-        width: auto;
-        height: 100vh;
-        display: flex;
-        transition: all ease-in-out .15s;
-        &#right{
-            transform: translateX(-500px);
-        }
-    }
-    .wrapper{
-        flex-shrink: 0;
-        width: 500px;
-        @media (max-width: 1024px) {
-            width: calc(100vw - 80px);
-            filter: brightness(40%);
-        }
-        @media (max-width: 784px) {
-            width: 100vw;
-        }
-    }
-    .blue{
-        background-color: rgb(116, 185, 255);
-    }
-    .red{
-        background-color: #FFE616;
-    }
-    @media (max-width: 1280px) {
-        transform: translateX(0px);
-        left: 0;
-    }
-    @media (max-width: 1024px) {
-        width: calc(100% - 80px);
-    }
-    @media (max-width: 784px) {
-        width: 100%;
-    }
-`
-
-const AbsoluteTitleBack = styled.div`
-    position: absolute;
-    top: calc(50%);
-    left: 50%;
-    transform: translateY(-50%);
-    width: calc(100% - 680px);
-    @media (max-width: 1280px) {
-        width: calc(100% - 540px);
-    }
-    @media (max-width: 1024px) {
-        display: none;
-    }
-    h2{
-        position: absolute;
-        font-family: 'GmarketSansMedium';
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 80px;
-        line-height: 76px;
-        letter-spacing: -6px;
-        color: #f5f6f9;
-        pointer-events: none;
-        top: 50%;
-        transform: translateY(-50%);
-        @media (max-width: 1400px) {
-            font-size: 60px;
-            line-height: 56px;
-        }
-        @media (max-width: 1280px) {
-            font-size: 48px;
-            line-height: 42px;
-        }
-    }
-    p{
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        font-family: 'GmarketSansMedium';
-        font-size: 20px;
-        line-height: 27px;
-        b{
-            font-size: 44px;
-            line-height: 44px;
-            transition: all ease-in-out .15s;
-        }
-        @media (max-width: 1400px) {
-            font-size: 18px;
-            line-height: 22px;
-            b{
-                font-size: 36px;
-                line-height: 36px;
-            }
-        }
-        @media (max-width: 1280px) {
-            font-size: 16px;
-            line-height: 22px;
-        }
-    }
-`
-
-const HomeTitle = styled.div`
-    width: 100%;
-    height: calc(var(--vh, 1vh) * 135);
-    z-index: 999999;
-    color: #FFFFFF;
-    text-shadow: 2px 2px ${props => props.color};
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    font-family: 'GmarketSansMedium';
-    font-size: 48px;
-    padding-left: 52px;
-    h1,h2{
-        transform: translateY(calc(var(--vh, 1vh) * -40));
-    }
-    h2{
-        font-size: 42px;
-        margin-top: 64px;
-    }
-    @media (max-width: 1024px) {
-        display: flex;
-    }
-    @media (max-width: 640px) {
-        h1{
-            font-size: 42px;
-        }
-        h2{
-            margin-top: 42px;
-            font-size: 26px;
-        }
-    }
-`
-
-const Box = styled.div`
-    position: relative;
-    width: 100%;
+    padding: 60px 0px;
     min-height: 100vh;
+    overflow: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: #FFFFFF;
-    z-index: 15;
+    h1{
+        margin-top: 18px;
+        font-size: 2.4em;
+        font-weight: bold;
+        font-family: 'GmarketSansMedium';
+    }
+    /* scroll-snap-type: y mandatory; */
+`
+const Top = styled.div`
+    width: 100%;
+    max-height: calc(100vh - 60px);
+    /* margin-top: 24px; */
+    overflow: hidden;
+    cursor: pointer;
+    .main-image{
+        width: 100%;
+        height: 100%;
+        transition: all .2s ease-in-out;
+    }
+    .dark-back{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000000;
+        opacity: 0.3;
+        transition: all .2s ease-in-out;
+    }
+    .text-content{
+        position: absolute;
+        top: 55%;
+        left: 20%;
+        color: #FFFFFF;
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        h4{
+            font-size: 18px;
+        }
+        h2{
+            margin-top: 12px;
+            font-size: 3.8em;
+            font-weight: 300;
+        }
+        button{
+            font-size: 20px;
+            padding: 8px 18px;
+            margin-top: 24px;
+            transition: all ease-in-out .3s;
+            /* background-color: #FFFFFF; */
+            color: #FFFFFF;
+            font-weight: 500;
+            /* border-radius: 8px; */
+        }
+    }
+    :hover{
+        .dark-back{
+            opacity: 0.4;
+        }
+        img{
+            scale: 1.03;
+        }
+        .text-content{
+            display: flex;
+        }
+    }
+`
+const Center = styled.div`
+    margin-top: 4vh;
+    width: 100%;
+    overflow: hidden;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2{
+        font-size: 1.8em;
+    }
+    .box-1{
+        width: 100%;
+        margin-top: 24px;
+        height: 94vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 32px;
+        div{
+            overflow: hidden;
+        }
+        div.left {
+            width: 33vw;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            .image-box{
+                width: 100%;
+                height: 16.5vw;
+                background-color: red;
+                img{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: all ease-in-out .2s;
+                    cursor: pointer;
+                }
+            }
+            
+            h2{
+                position: absolute;
+                left: 20px;
+                bottom: 12px;
+                font-size: 5em;
+            }
+            :hover{
+                img {
+                    scale: 1.05;
+                }
+            }
+        }
+        div.right {
+            width: 65vw;
+            height: 100%;
+            img{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all ease-in-out .2s;
+                cursor: pointer;
+            }
+            :hover{
+                img {
+                    scale: 1.05;
+                }
+            }
+        }
+    }
 `
 
 export default Home;
